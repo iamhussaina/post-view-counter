@@ -22,7 +22,7 @@ This utility is designed to be included directly within a WordPress theme. It pr
 
     ```php
     // Load the Post View Counter Utility
-    require_once( get_template_directory() . 'inc/hussainas-post-view-counter.php' );
+    require_once( get_template_directory() . 'inc/hussainas-post-view-utility.php' );
     ```
 
 That's it! The utility will now start tracking views.
@@ -70,8 +70,7 @@ For more control, you can use these helper functions:
 If you want to automatically append the view count to the end of all post content, you can enable the `the_content` filter.
 
 1.  Open `inc/hussainas-post-view-utility.php`.
-2.  Go to **line 120** (approx).
-3.  Uncomment the following line:
+2.  Uncomment add_filter( 'the_content', 'hussainas_add_views_to_content' ):
 
     ```php
     // FROM:
